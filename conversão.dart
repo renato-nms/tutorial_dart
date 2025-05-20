@@ -1,19 +1,20 @@
 void main() {
-    double pi = 3.1415;
+   String nome = 'Daves';
+   print(nome);
 
-    print(pi );
-    print(pi.abs()); //abs transforma o que for negativo, em positivo
+    print(nome.trim()); //remove espaços a esquerda e direita
+    print('[$nome]');
 
-    print('O valor de pi é $pi.toString()');
-
-    print(pi.clamp(1,2)); //Garante que o numero permaneça entre 1 e 2
-
-    print(pi.round()); //arredonda
-
-    print(pi.toStringAsFixed(2)); //arredonda para o numero de casas decimais especificado entre parenteses
-
-    if(                                    !pi.isNegative){
-        print('negativo');
+    nome = nome.trimLeft(); //tira espaços a esquerda
+    nome = nome.trimRight(); //tira espaços a direita
+    nome = nome.padLeft(30,' '); //complementa, primeiro digita quantas vezes quer inserir, e depois o quê inserir
+         
+    if(nome.contains('Daves')){
+        print('Contêm Daves');
+    } else {
+        print('Não contêm Daves')
     }
 
+    print(nome.substring(',3')) // pega os caracteres que estão entre os numeros digitados
+    print(nome.split(' ')); //retorna a lista
 }
